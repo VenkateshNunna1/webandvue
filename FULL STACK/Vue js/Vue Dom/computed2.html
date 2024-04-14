@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  </head>
+  <body>
+    <form action="" id="computed">
+      <label for="name">First Name</label>
+      <input
+        type="text"
+        v-on:input="setFirstName($event)"
+        v-bind:value="firstName"
+        id="name"
+      />
+      <p>{{firstName}}</p>
+      <label for="lastname">Last Name</label>
+      <input type="text" v-model="lastName" id="lastname" />
+      <p>{{lastName}}</p>
+      <h1 v-on="setFullName()">Full Name:{{fullName}}</h1>
+      <button v-on:click.prevent="setReset()">Reset</button>
+    </form>
+    <script src="computed2.js"></script>
+  </body>
+</html>

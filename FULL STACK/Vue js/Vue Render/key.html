@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Key Attribute</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  </head>
+  <body>
+    <header>
+      <h1>key attribute</h1>
+    </header>
+    <section class="container">
+      <h1>Write Daily Tasks Here</h1>
+      <input type="text" v-model="fetchGoals" />
+      <button @click="setGoals()">Add Goals</button>
+      <button @click="setReset()">Reset</button>
+      <button @click="setremove(index)">Remove</button>
+      <p v-if="goal.length===0">Till Now you didn't add Any Tasks</p>
+      <ul v-else>
+        <li
+          v-for="(goal1,index) in goal"
+          @click="setremove(index)"
+          :key="goal1"
+        >
+          <p>{{goal1}}-{{index}}</p>
+          <input type="text" @click.stop />
+        </li>
+      </ul>
+    </section>
+    <script src="key.js"></script>
+  </body>
+</html>

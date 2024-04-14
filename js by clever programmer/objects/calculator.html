@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>calculator</title>
+</head>
+<body>
+	<button
+    onclick="
+      let r=calculation(n1,n2,add);
+      console.log(r);
+    "
+	>add</button>
+	<button
+      onclick="
+      let r=calculation(n1,n2,subtraction);
+      console.log(r);
+      "
+	>Subtraction</button>
+	<button
+     onclick="
+    let r=calculation(n1,n2,multiplication);
+      console.log(r);
+     "
+	>Multiplication</button>
+    <script type="text/javascript">
+    	let n1= Number(prompt('enter a first number'));
+    	let n2= Number(prompt('enter a seocond number'));
+    	let add=function(n1,n2){
+    		return n1+n2;
+    	}
+    	function subtraction(n1,n2){
+    		return n1-n2;
+    	}
+    	let multiplication=(n1,n2)=>{
+    		return n1*n2;
+    	}
+    	function calculation(n1,n2,callback){
+    		let result=callback(n1,n2);
+    		return result;
+    	}
+    </script>
+</body>
+</html>

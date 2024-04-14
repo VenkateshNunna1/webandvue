@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Rock-paper-scissors</title>
+</head>
+<body>
+	<p>Rock paper scissors</p>
+	<button
+      onclick="
+
+      "
+	>Rock</button>
+	<button>paper</button>
+	<button>Scissors</button>
+<script type="text/javascript">
+	let computerMove='';
+	function computerMove(){
+		let rand=Math.random();
+		if(rand>=0 && rand<1/3){
+			computerMove='Rock';
+		}
+		else if(rand>=1/3 && rand<2/3){
+			computerMove='paper';
+		}
+		else{
+			computerMove='Scissor';
+		}
+	}
+</script>
+</body>
+</html>

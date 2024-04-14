@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Cart Quantity</title>
+</head>
+<body>
+	<p>About cart:</p>
+	<button
+     onclick="
+      console.log('show Quantity:'+showQuantity);
+      "
+	>Show Quantity</button>
+	<button onclick="
+    showQuantity+=1;
+    console.log('showQuantity:'+showQuantity);
+	"
+	>Add to Cart</button>
+	<button onclick="
+	showQuantity+=2;
+	 console.log(`showQuantity:${showQuantity}`);
+	   "
+
+	>+2</button>
+	<button
+	onclick="
+	showQuantity+=3;
+	 console.log(`showQuantity:${showQuantity}`);
+	   ">+3</button>
+	<button
+	onclick="
+	showQuantity+=4;
+	 console.log(`showQuantity:${showQuantity}`);
+	   ">+4</button>
+	<button
+	onclick="
+	showQuantity+=5;
+	 console.log(`showQuantity:${showQuantity}`);
+	   ">+5</button>
+	<button onclick="
+	showQuantity=0;
+	console.log('cart was reset');
+    console.log(`ShowQuantity:${showQuantity}`);"
+	>Reset</button>
+	<button onclick="
+	 showQuantity-=1;
+	 console.log(`showQuantity:${showQuantity}`)"
+	>Remove from cart</button>
+	<button onclick="
+	 showQuantity-=2;
+	 console.log(`showQuantity:${showQuantity}`)"
+	>-2</button>
+	<button onclick="
+	 showQuantity-=3;
+	 console.log(`showQuantity:${showQuantity}`)"
+	>-3</button>
+<script >
+	let showQuantity=0;
+</script>
+</body>
+</html>

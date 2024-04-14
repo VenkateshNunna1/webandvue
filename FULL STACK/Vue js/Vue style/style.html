@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Style</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <style>
+      .container {
+        height: 100vh;
+        background-color: blanchedalmond;
+      }
+      body {
+        padding: 0px;
+        margin: 0px;
+      }
+      .demo {
+        height: 100px;
+        width: 100px;
+        margin-bottom: 10px;
+      }
+      .one,
+      .two,
+      .three {
+        border-style: dotted;
+        position: relative;
+        left: 200px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div
+        class="demo one"
+        @click="selectedBox('A')"
+        :style="{borderColor:boxA?'red':'black'}"
+      ></div>
+      <div
+        class="demo two"
+        @click="selectedBox('B')"
+        :style="{backgroundColor:boxB?'blue':'violet'}"
+      ></div>
+      <div
+        class="demo three"
+        @click="selectedBox('C')"
+        :style="{backgroundColor:boxC?'yellow':'black'}"
+      ></div>
+      <p>{{boxA}}</p>
+    </div>
+  </body>
+  <script src="style1.js"></script>
+</html>

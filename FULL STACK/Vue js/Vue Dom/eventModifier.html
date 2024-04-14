@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  </head>
+  <body>
+    <header>
+      <h1>Vue Events</h1>
+    </header>
+    <section class="eventModifier">
+      <h1>Events in Action</h1>
+      <button v-on:click.right="addCount">Add 10</button>
+      <button v-on:click.left="subCount">Subtract 5</button>
+      <p>The Result:{{count}}</p>
+      <label for="">Name</label>
+      <input type="text" v-on:keyup.enter="setName($event)" />
+      <p>Your Name:{{name}}</p>
+      <form action="" v-on:submit.prevent>
+        <input type="text" />
+        <button v-on:click.prevent="preventModifier()">Sign Up</button>
+        <p>{{preventModifier1}}</p>
+        <button>signout</button>
+      </form>
+    </section>
+    <script src="eventModifier.js"></script>
+  </body>
+</html>

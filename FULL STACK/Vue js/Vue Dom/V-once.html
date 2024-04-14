@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>V-once</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  </head>
+  <body>
+    <section class="V-once">
+      <button v-on:click="addCount()">Add10</button>
+      <button v-on:click="subCount() ">Sub5</button>
+      <p v-once>The starting count:{{ count}}</p>
+      <p>The result:{{count}}</p>
+    </section>
+    <script src="V-once.js"></script>
+  </body>
+</html>

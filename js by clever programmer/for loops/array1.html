@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+<script type="text/javascript">
+	let fun1=()=>{
+	const a =[1,2,3,4,5,6];
+	for(const arr of a){
+       console.log(arr);
+	}
+};
+// fun1();
+let fun2=()=>{
+	const a=[1,2,3,4,5,6,7];
+	for(const arr of a){
+		console.log(arr*2);
+	}
+}
+// fun2();
+let fun3=()=>{
+	const a=[1,2,3,4,5,6,7];
+	const b=[];
+	for(const arr of a){
+		let c=arr*2;
+		let k = b.push(c);
+
+	}
+			console.log(b);
+};
+// fun3();
+let fun4=()=>{
+	let arr= [1,2,3,4,5,6];
+	for(let a of arr){
+		console.log(a**2);//square of numbers
+	}
+};
+ // fun4();
+const fun5=(number)=>{
+	let result=[];
+	for(const numbers of number ){
+	  let c=numbers*2;
+	   result.push(c);
+	}
+    for(let results of result){
+    	console.log(results*results);
+    }
+    	return result;
+    
+};
+let k=fun5([1,2,3,4,5,6]);
+// console.log(k);
+</script>
+</body>
+</html>

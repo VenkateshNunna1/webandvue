@@ -1,0 +1,12 @@
+div{
+   background-color: red;
+   height:100vh;
+   background-image: url("https://hd.wallpaperswide.com/thumbs/gta_6_muscle_car_video_game-t1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: left;
+  background-attachment: fixed;
+}
+   *{
+      margin: 0%;
+   }

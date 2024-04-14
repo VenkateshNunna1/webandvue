@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <style>
+      .header,
+      .section {
+        font-weight: bold;
+        font-size: 30px;
+      }
+      h1 {
+        text-align: cente;
+      }
+      body {
+        margin: 0;
+        padding: 0;
+        text-align: center;
+        margin-top: 20vh;
+        background-color: bisque;
+      }
+      input {
+        height: 30px;
+        width: 300px;
+        border-radius: 15px;
+        border: none;
+      }
+      .button {
+        height: 30px;
+        width: 100px;
+        border-radius: 50px;
+      }
+      .button1 {
+        margin-top: 29px;
+        position: relative;
+        right: 40px;
+        height: 40px;
+        width: 150px;
+        border-radius: 20px;
+      }
+      button {
+        border: none;
+        font-weight: bold;
+        background-color: cornflowerblue;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="header">Vue Lists and Conditional Content</header>
+    <section class="section">
+      <h1>Assignment</h1>
+      <input type="text" v-model="task" />
+      <button class="button" @click="addTask()">Add Task</button>
+      <!-- <h1 v-if="taskArr.length===0">As of now,there were no tasks you added</h1> -->
+      <ul v-if="taskListIsVisible">
+        <li v-for="(task, index) in taskArr" :key="task">{{task}}</li>
+      </ul>
+      <div>
+        <button class="button1" @click="toggleTask()">{{buttonStatus}}</button>
+      </div>
+    </section>
+    <script src="ass.js"></script>
+  </body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>object1</title>
+</head>
+<body>
+   <script type="text/javascript">
+   	const person={
+   		firstname:'venkatesh',
+   		lastname:'nunna',
+   		character:function(age){
+   			let a = `${this.firstname} ${this.lastname} is a good boy and his age is ${age}`;
+   			return a;
+   		} 
+
+   	};
+   	          console.log(person.firstname);
+		       console.log(person.lastname);
+		       let n= person.character(21);
+		       console.log(n);
+
+   </script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+package strings1;
+
+public class split2 {
+
+	public static void main(String[] args) {
+		String s="java is a opp language";
+		opp(s);
+		
+
+	}
+	static void opp(String s) {
+		String[] arr=s.split(" ");
+		String s2=" ";
+		for(int i=0;i<=arr.length-1;i++) {
+		 char[] arr1	=reverse(arr[i]);
+		  String s3 = new String(arr1);
+		  System.out.print(s3+" ");
+		  
+		}
+		}
+		
+	static char[] reverse(String s) {
+		char[] arr = s.toCharArray();
+		int i=0;
+		int j=arr.length-1;
+		while(i<j) {
+			char temp =arr[i];
+			arr[i]=arr[j];
+			arr[j]=temp;
+			i++;
+			j--;
+		}
+		return arr;
+	}
+
+}

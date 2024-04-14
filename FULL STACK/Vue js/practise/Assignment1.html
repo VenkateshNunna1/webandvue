@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  </head>
+  <body>
+    <div class="ass">
+      <button v-on:click="mode()">Alert</button>
+      <label for="">Enter Name</label>
+      <input type="text" v-on:keydown="setName($event)" />
+      <h1>My name is:{{name}}</h1>
+      <label for="">Enter email</label>
+      <input type="email" v-on:keyup:enter="setEmail($event)" />
+      <p>{{email}}</p>
+    </div>
+    <script src="Assignment1.js"></script>
+  </body>
+</html>

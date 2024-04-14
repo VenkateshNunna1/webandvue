@@ -1,0 +1,29 @@
+package strings1;
+
+public class Split3 {
+    public static void main(String[] args) {
+		String s="java is an opp language";
+		char[] arr = s.toCharArray();
+		int i=arr.length-1;
+		int j=arr.length-1;
+		String res=" ";
+		while(i>=0) {
+			while(i>=0 && arr[i]!=' ') {
+				i--;
+			}
+			int k=i+1;
+			String s1=" ";
+			while(k<=j) {
+				s1=s1+arr[k];
+			}
+			if(i>0) {
+				res=res+" ";
+			}
+			i--;
+			j=i;
+			
+		}
+		System.out.println(res);
+		}
+	}
+

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+        .container{
+            height:100vh;
+            background-color: lightblue;
+            display:grid;
+            gap:10px;
+            grid-template-columns: 100px 100px 100px;
+            grid-template-rows:1fr 1fr 1fr;
+        }
+        div{
+            
+            background-color: green;
+        }
+       .a{
+         grid-column: 2/4;  
+        
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="a">Header</div>
+        <div class="b">menu</div>
+        <div class="c">main</div>
+        <div class="d">right</div>
+        <div class="footer">footer</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<script type="text/javascript">
+	let arr=[{firstname:"venky",age:21},
+		     {firstname:"gani",age:19}
+		];
+	let output = arr.reduce(function red(acc,curr){
+		if(curr.age<30){
+			 acc.push(curr.age);
+		}
+		return acc;
+	},[]);
+	console.log(output);
+</script>
+</body>
+</html>

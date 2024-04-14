@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  </head>
+  <body>
+    <header>
+      <h1>Watcher</h1>
+    </header>
+    <section class="watch">
+      <button v-on:click="setAdd()">Add 10</button>
+      <button v-on:click="setReduce()">Reduce 5</button>
+      <h1 //v-on="count1()"//>Result:{{count}}</h1>
+    </section>
+    <script src="watchers1.js"></script>
+  </body>
+</html>

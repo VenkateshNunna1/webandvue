@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>V-Html</title>
+  </head>
+  <body>
+    <header>
+      <h1>Introduction About ViratKohli</h1>
+    </header>
+    <section class="virat">
+      <h2>Virat Kohli</h2>
+      <h2>
+        Want to Know How many Runs Virat Scored In International Cricket?Click
+        on Below Link
+      </h2>
+      <a v-bind:href="viratInfo">Click Here</a>
+      <p>{{ carrer() }}</p>
+      <p v-html=" viratWife"></p>
+      <p v-html="carrer()"></p>
+    </section>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="v-html.js"></script>
+  </body>
+</html>

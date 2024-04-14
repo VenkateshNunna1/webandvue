@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>FLEX</title>
+	<style type="text/css">
+		.home,.notify,.mes{
+			display:flex;
+			flex-direction: row;
+			justify-content:space-between ;
+			width:250px;
+			height:20px ;
+			align-items: center;
+
+		}
+		.p1,.p2,.p3{
+			font-family:arial ;
+			font-weight:bold ;
+			font-size: 14px;
+		}
+		.b1,.b2,.b3{
+             border:none;
+             background-color:#406cec ;
+             color:white;
+             border-radius: 10px;
+             height:20px ;
+             padding-left:8px ;
+             padding-right:8px ;
+
+
+		}
+		.container{
+			padding:8px;
+			display:flex;
+			flex-direction:column ;
+			width:250px;
+			grid-template-columns: 200px;
+			row-gap: 15px;
+		    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); 
+		    border-radius: 10px;
+		    margin-left:40% ;
+		    padding-left: 10px;
+		    padding-right:10px ;
+
+		}
+	</style>
+</head>
+<body>
+   <div class="container">
+   	   <div class="home">
+   	   	    <p class="p1">Home</p>
+   	   	    <button class="b1">14</button>
+   	   </div>
+   	   <div class="notify">
+   	   	    <p class="p2">Notifications</p>
+   	   	    <button class="b2">3</button>
+   	   </div>
+   	   <div class="mes">
+   	   	    <p class="p3">Messages</p>
+   	   	    <button class="b3">5</button>
+   	   </div>
+   </div>
+</body>
+</html>

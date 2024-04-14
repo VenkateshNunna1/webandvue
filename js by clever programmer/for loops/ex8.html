@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+<script type="text/javascript">
+	let fun=(string1)=>{
+     let object={};
+        string1=string1.split(' ');
+         for(let word of string1){
+         	if(word in object){
+         		object[word]++;
+         	}
+         	else{
+         		object[word]=1;
+         	}
+         }
+         console.log(object);
+	}
+	let string = 'Happy Happy Birthday';
+	fun(string);
+</script>
+</body>
+</html>

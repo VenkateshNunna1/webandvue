@@ -1,0 +1,106 @@
+template>
+  <ul>
+    <li>
+      <strong>NAME:</strong>{{ name
+      }}{{ friendIsFavorite === "1" ? "(favorite)" : "" }}
+    </li>
+    <button @click="toggleFavorite">toggle favorite</button>
+    <button @click="toggleButton">{{ buttonContent }} Details</button>
+    <ul v-if="detailsAreVisible">
+      <li><strong>PHONE-NUMBER:</strong>{{ mobileNumber }}</li>
+      <li><strong>EMAIL:</strong>{{ emailAddress }}</li>
+      <li>{{ isFavorite }}</li>
+    </ul>
+    <ul v-else>
+      <h1>here is the details</h1>
+    </ul>
+  </ul>
+</template>
+
+<script>
+export default {
+  props: ["name", "mobileNumber", "emailAddress", "isFavorite"], // whenever you are adding prop to the app.vue and you have to add prop here also
+  data() {
+    return {
+      detailsAreVisible: false,
+      friend: {
+        id: 1,
+        name: "venkatesh",
+        mobileNumber: 6309875788,
+        emailAddress: "venky@gmail.com",
+      },
+      friendIsFavorite: this.isFavorite,
+    };
+  },
+  methods: {
+    toggleButton() {
+      return (this.detailsAreVisible = !this.detailsAreVisible);
+    },
+    toggleFavorite() {
+      if (this.friendIsFavorite === "1") {
+        return (this.friendIsFavorite = "0");
+      } else {
+        return (this.friendIsFavorite = "1");
+      }
+    },
+  },
+  computed: {
+    buttonContent() {
+      if (this.showHideButton) {
+        return "hide";
+      } else {
+        return "show";
+      }
+    },
+  },
+  watch: {
+    // isFavorite() {
+    //   if (this.isFavorite === "1") {
+    //     return "(favorite)";
+    //   } else {
+    //     return "";
+    //   }
+    // },
+  },
+};
+</script>
+
+
+
+
+
+
+
+
+
+<template>
+  <header>
+    <h1>My Friends</h1>
+  </header>
+  <section>
+    <ul>
+      <friend-contact
+        name="venaktesh"
+        mobile-number="630875788"
+        is-favorite="1"
+      ></friend-contact>
+      <friend-contact
+        name="Ganesh"
+        mobile-number="9652717037"
+        email-address="gani@gmail.com"
+        is-favorite="0"
+      ></friend-contact>
+    </ul>
+  </section>
+</template>
+
+<script>
+export default {
+  data() {
+    return {};
+  },
+  methods: {},
+  computed: {},
+  watch: {},
+};
+</script>

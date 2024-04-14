@@ -1,0 +1,33 @@
+package strings1;
+
+public class panagram2 {
+
+	public static void main(String[] args) {
+	String s1="the brown fox jumps over the lazy dog";
+	boolean b = Anagram(s1);
+	if(b) {
+		System.out.println("given string is anagram");
+	}
+	else {
+		System.out.println("not a anagram");
+	}
+
+	}
+	static boolean Anagram(String s) {
+		int[] arr = new int[26];
+		char[] charArr=s.toCharArray();
+		s=s.replace(" ","");
+		for(int i=0;i<=charArr.length-1;i++) {
+			int index=charArr[i]-'a';
+			arr[index]++;
+		}
+		for(int i=0;i<=arr.length-1;i++) {
+			if(arr[i]!=1) {
+				return false;
+			}
+		}
+		return true;
+		
+	}
+
+}

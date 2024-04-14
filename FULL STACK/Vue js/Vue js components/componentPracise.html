@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  </head>
+  <body>
+    <div>
+      <h1>Friends Contact Details</h1>
+    </div>
+    <div class="container">
+      <ul v-for="friend in friends" :key="friend.id">
+        <li>{{friend.name}}</li>
+        <button @click="toggleFunc()">{{buttonContent}}details</button>
+        <ul v-if="showDetailsfunc">
+          <li>{{friend.id}}</li>
+          <li>{{friend.mobileNumber}}</li>
+          <li>{{friend.email}}</li>
+        </ul>
+      </ul>
+    </div>
+    <script src="componentpracise.js"></script>
+  </body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  </head>
+  <body>
+    <form action="" class="gani">
+      <label for="">FirstName</label>
+      <input type="text" v-model="firstName" />
+      <p>{{firstName}}</p>
+      <label for="">LastName</label>
+      <input type="text" v-model="lastName" />
+      <p>{{lastName}}</p>
+      <h1>{{fullName1}}</h1>
+      <button v-on:click.prevent="setReset()">Reset</button>
+    </form>
+    <script src="computed3.js"></script>
+  </body>
+</html>

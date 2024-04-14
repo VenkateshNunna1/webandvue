@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Project2</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  </head>
+  <body>
+    <form action="" class="form">
+      <label for="name">Enter Name:</label>
+      <input type="text" id="name" v-on:input="setName($event)" /><br />
+      <h1>My Name is {{name}}</h1>
+      <br />
+      <label for="lastName">Enter LastName:</label>
+      <input type="text" id="lastName" v-on:input="setLast($event)" />
+      <h1>My lastNme is {{lastName}}</h1>
+      <br />
+      <label for="email">Enter Email:</label>
+      <input type="email" id="email" v-on:input="setEmail($event)" />
+      <h1>My email is {{email}}</h1>
+      <button>submit</button>
+    </form>
+    <script src="project2.js"></script>
+  </body>
+</html>

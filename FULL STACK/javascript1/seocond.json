@@ -1,0 +1,12 @@
+{
+  "firstName": "venkatesh",
+  "lastName": "nunna",
+  "age": 19,
+  "email": "venky@2001",
+  "isSubscribed": true,
+  "hobbies": ["playing", "reading"],
+  "address": {
+    "city": "chirala",
+    "idk": true
+  }
+}

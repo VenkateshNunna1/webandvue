@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Method</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  </head>
+  <body>
+    <header>
+      <h1>Vue Course Goals</h1>
+    </header>
+    <section id="goal">
+      <h2>My Course Goal</h2>
+      <p>{{courseGoal}}</p>
+      <p>learn more <a v-bind:href="vueLink">About Vue</a></p>
+      <p>{{outputGoal()}}</p>
+    </section>
+    <script src="methods.js"></script>
+  </body>
+</html>

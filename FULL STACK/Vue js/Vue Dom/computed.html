@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>computed</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  </head>
+  <body>
+    <section class="computed">
+      <label for="">Name</label>
+      <input
+        type="text"
+        v-bind:value="name"
+        v-on:keyup.enter="setName($event)"
+      />
+      <button v-on:click.prevent="setReset()">Reset</button>
+      <h1>My name is:{{name}}</h1>
+      <h1>My Full Name is:{{fullname}}</h1>
+    </section>
+    <script src="computed.js"></script>
+  </body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>closure1</title>
+</head>
+<body>
+<script type="text/javascript">
+	function x(){
+		let v=7;
+	  return function y(){
+		 console.log(v);
+		}	
+	    
+	}
+	let k=x();//7 
+	k();
+
+
+	//some developers will do
+	function a(){
+		let o=7;
+		return function l(){
+			console.log(o);
+		}
+	}
+	let p=a();
+	p();
+	let a=8;
+	console.log(a);
+	
+
+</script>
+</html

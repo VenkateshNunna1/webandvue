@@ -1,0 +1,118 @@
+<template>
+  <ul>
+    <li>
+      <strong>NAME:</strong>{{ name }}{{ friendIsFavorite ? "(favorite)" : "" }}
+    </li>
+    <button @click="toggleFavorite">toggle favorite</button>
+    <button @click="toggleButton">{{ buttonContent }} Details</button>
+    <ul v-if="detailsAreVisible">
+      <li><strong>PHONE-NUMBER:</strong>{{ mobileNumber }}</li>
+      <li><strong>EMAIL:</strong>{{ emailAddress }}</li>
+      <li>{{ isFavorite }}</li>
+    </ul>
+    <ul v-else>
+      <h1>here is the details</h1>
+    </ul>
+  </ul>
+</template>
+
+<script>
+export default {
+  // props: ["name", "mobileNumber", "emailAddress", "isFavorite"], // whenever you are adding prop to the app.vue and you have to add prop here also
+  //validating props
+  props: {
+    name: {
+      type: String,
+      required: true,
+    },
+    mobileNumber: {
+      type: Number,
+      required: true,
+    },
+    emailAddress: {
+      type: String,
+      required: true,
+    },
+    isFavorite: {
+      type: Boolean,
+      required: false,
+      default: false, // default property can be use as function
+      // validator: function (value) {
+      //   //isFavorite will give the current value that value we are passing in the function
+      //   return value === "1" || value === "0";
+      // },
+    },
+  },
+  data() {
+    return {
+      detailsAreVisible: false,
+      friendIsFavorite: this.isFavorite,
+    };
+  },
+  methods: {
+    toggleButton() {
+      return (this.detailsAreVisible = !this.detailsAreVisible);
+    },
+    toggleFavorite() {
+      this.friendIsFavorite = !this.friendIsFavorite;
+    },
+  },
+  computed: {
+    buttonContent() {
+      if (this.detailsAreVisible) {
+        return "hide";
+      } else {
+        return "show";
+      }
+    },
+  },
+};
+</script>
+
+
+
+
+
+<template>
+  <header>
+    <h1>My Friends</h1>
+  </header>
+  <section>
+    <ul>
+      <friend-contact
+        v-for="friend in friends"
+        :key="friend.id"
+        v-bind:name="friend.name"
+        :mobile-number="friend.mobileNumber"
+        :email-address="friend.email"
+        :is-favorite="false"
+      ></friend-contact>
+    </ul>
+  </section>
+</template>
+
+<script>
+export default {
+  data() {
+    return {
+      friends: [
+        {
+          id: 1,
+          name: "venkatesh",
+          mobileNumber: 6309875788,
+          email: "venky@gamil.com",
+        },
+        {
+          id: 2,
+          name: "ganesh",
+          mobileNumber: 9652717037,
+          email: "gani@gamil.com",
+        },
+      ],
+    };
+  },
+  methods: {},
+  computed: {},
+  watch: {},
+};
+</script>

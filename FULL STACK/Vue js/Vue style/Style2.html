@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+      }
+      .container {
+        background-color: aqua;
+      }
+      .demo {
+        position: relative;
+        left: 50vw;
+        height: 100px;
+        width: 100px;
+        border-style: solid;
+        margin-bottom: 10px;
+      }
+      .gani {
+        background-color: orange;
+        border-style: dotted;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="demo" :class="{gani:boxA}" @click="boxSelected('A')"></div>
+      <div class="demo" :class="{gani:boxB}" @click="boxSelected('B')"></div>
+    </div>
+    <script src="style2.js"></script>
+  </body>
+</html>

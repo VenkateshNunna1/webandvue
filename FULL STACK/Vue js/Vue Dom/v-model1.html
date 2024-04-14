@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  </head>
+  <body>
+    <section class="vmodel">
+      <label for="">Name</label>
+      <input type="text" v-model="name" />
+      <p>Name:{{name}}</p>
+      <label for="">SerName</label>
+      <input type="text" v-model="serName" />
+      <p>SerName:{{serName}}</p>
+      <label for="">Email</label>
+      <input type="email" v-model="email" />
+      <p>Email:{{email}}</p>
+    </section>
+    <script src="v-model1.js"></script>
+  </body>
+</html>

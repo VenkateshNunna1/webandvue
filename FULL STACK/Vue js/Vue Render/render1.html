@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <h1>Vue Course Goals</h1>
+      <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+      <style>
+        .container {
+          text-align: center;
+        }
+        h1 {
+          text-align: center;
+        }
+        li {
+          text-decoration: none;
+        }
+      </style>
+    </header>
+    <section class="container">
+      <h1>My Course Goals</h1>
+      <input type="text" v-model="fetchGoal" />
+      <button @click.enter="addGoal()">Add Goals</button>
+      <button @click.prevent="setReset()">Reset</button>
+      <p v-if="goals.length===0">Right Now! There are no Goals</p>
+      <ul v-else>
+        <li v-for="goal in goals">{{ goal }}</li>
+      </ul>
+    </section>
+    <script src="render1.js"></script>
+  </body>
+</html>

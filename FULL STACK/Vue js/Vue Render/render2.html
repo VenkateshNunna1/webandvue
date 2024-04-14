@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Render</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  </head>
+  <body>
+    <header>
+      <h1>Time Table</h1>
+    </header>
+    <section class="container">
+      <h1>Set The Time Table</h1>
+      <input type="text" v-model="fetchTask" />
+      <button @click="addTasks() ">Add Tasks</button>
+      <button @click="setReset() ">Reset Tasks</button>
+      <p v-if="Tasks.length===0">There is no tasks till now</p>
+      <ul v-else>
+        <li v-for="(task,index) in Tasks" @click=" removeTask(index)">
+          {{task}}-{{index}}
+        </li>
+      </ul>
+      <!-- <ul>
+        <li v-for="value in 10">{{value}}</li>
+      </ul>
+      <li v-for="value in 10">{{value}}</li>
+      <h1 v-for="value in 5">{{value}}</h1>
+      <h3 v-for="(value,key,index) in person">{{key}}-{{value}}-{{index}}</h3> -->
+    </section>
+    <script src="render2.js"></script>
+  </body>
+</html>

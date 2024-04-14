@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  </head>
+  <body>
+    <header>
+      <h1>Virat Bio</h1>
+    </header>
+    <section class="virat">
+      <h2>Virat Stats</h2>
+      <p>{{virat}}</p>
+      <div>
+        <img v-bind:src="img" height="200px" width="200px" />
+      </div>
+      <a v-bind:href="viratLink">Virat Bio</a>
+      <button v-on:click="followersInc()">Add</button>
+      <button v-on:click=" followersdec()">Reduce</button>
+      <p>Virat Kohli Followers Count:{{count}}</p>
+    </section>
+    <script src="practise1.js"></script>
+  </body>
+</html>
